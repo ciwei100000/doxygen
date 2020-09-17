@@ -1,3 +1,31 @@
+doxygen (1.8.20-1) unstable; urgency=medium
+
+  * Upload to unstable. Closes: #969142.
+
+ -- Paolo Greppi <paolo.greppi@libpf.com>  Sun, 13 Sep 2020 18:21:49 +0200
+
+doxygen (1.8.20-1~exp1) experimental; urgency=medium
+
+  * doxygen 1.8.20 release. Closes: #969313.
+
+ -- Paolo Greppi <paolo.greppi@libpf.com>  Mon, 31 Aug 2020 10:27:21 +0200
+
+doxygen (1.8.19-1) unstable; urgency=medium
+
+  * Upload to unstable. Closes: #967950, #968340.
+
+ -- Paolo Greppi <paolo.greppi@libpf.com>  Mon, 31 Aug 2020 09:36:22 +0200
+
+doxygen (1.8.19-1~exp1) experimental; urgency=medium
+
+  [ Pino Toscano ]
+  * Remove the git build dependency, no more needed since doxygen 1.8.17.
+
+  [ Paolo Greppi ]
+  * doxygen 1.8.19 release.
+
+ -- Paolo Greppi <paolo.greppi@libpf.com>  Thu, 20 Aug 2020 21:49:38 +0200
+
 doxygen (1.8.18-1-c1) unstable; urgency=medium
 
   * Bump llvm version to 10.

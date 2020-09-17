@@ -396,7 +396,7 @@ CASTKW ("const_cast"|"dynamic_cast"|"reinterpret_cast"|"static_cast")
 CHARLIT   (("'"\\[0-7]{1,3}"'")|("'"\\."'")|("'"[^' \\\n]{1,4}"'"))
 ARITHOP "+"|"-"|"/"|"*"|"%"|"--"|"++"
 ASSIGNOP "="|"*="|"/="|"%="|"+="|"-="|"<<="|">>="|"&="|"^="|"|="
-LOGICOP "=="|"!="|">"|"<"|">="|"<="|"&&"|"||"|"!"
+LOGICOP "=="|"!="|">"|"<"|">="|"<="|"&&"|"||"|"!"|"<=>"
 BITOP   "&"|"|"|"^"|"<<"|">>"|"~"
 OPERATOR {ARITHOP}|{ASSIGNOP}|{LOGICOP}|{BITOP}
 RAWBEGIN  (u|U|L|u8)?R\"[^ \t\(\)\\]{0,16}"("
@@ -571,7 +571,7 @@ RAWEND    ")"[^ \t\(\)\\]{0,16}\"
 					  //  absPath = QDir::cleanDirPath(yyextra->sourceFileDef->getPath()+"/"+absPath);
 					  //}
 
-                                          FileDef *fd=findFileDef(Doxygen::inputNameLinkedMap,yytext,ambig);
+                                          const FileDef *fd=findFileDef(Doxygen::inputNameLinkedMap,yytext,ambig);
 					  //printf("looking for include %s -> %s fd=%p\n",yytext,absPath.data(),fd);
 					  if (fd && fd->isLinkable())
 					  {
@@ -1089,6 +1089,9 @@ RAWEND    ")"[^ \t\(\)\\]{0,16}\"
 					  yyextra->bracketCount--;
                                           yyextra->parmType = yyextra->name;
 					  BEGIN(FuncCall);
+                                        }
+<Body>"\\)"|"\\("                       {
+                                          yyextra->code->codify(yytext);
                                         }
 <Body>[\\|\)\+\-\/\%\~\!]		{
   					  yyextra->code->codify(yytext);
