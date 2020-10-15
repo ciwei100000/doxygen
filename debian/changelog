@@ -1,3 +1,11 @@
+doxygen (1.8.20-4-c1) unstable; urgency=medium
+
+  * Merge tag 'debian/1.8.20-4' into ciwei100000
+    
+  * doxygen Debian release 1.8.20-4
+
+ -- ciwei100000 <ciwei100000@gmail.com>  Thu, 15 Oct 2020 07:34:56 -0700
+
 doxygen (1.8.20-4) unstable; urgency=medium
 
   * Team upload (salsa.d.o namepsace)
