@@ -1,3 +1,28 @@
+doxygen (1.8.20-4) unstable; urgency=medium
+
+  * Team upload (salsa.d.o namepsace)
+  * debian/patches/02b8dea10813606db4a013799a3e354368d0280f.patch:
+    - cherry-pick upstream fix for another crash during parse with CLANG
+      helper enabled (See: https://github.com/doxygen/doxygen/issues/8066)
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Fri, 02 Oct 2020 12:32:00 +0200
+
+doxygen (1.8.20-3) unstable; urgency=medium
+
+  * Team upload (salsa.d.o namespace)
+  * debian/patches/d067baf495d0415283ce724ad32cb9a08dc17c83.patch:
+    - cherry-pick upstream fix for crash during parse with CLANG helper
+      (Closes: #969141)
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Thu, 01 Oct 2020 23:23:51 +0200
+
+doxygen (1.8.20-2) unstable; urgency=medium
+
+  [ Scott Talbert ]
+  * Fix wxpython4.0 FTBFS due to doxygen regression
+
+ -- Paolo Greppi <paolo.greppi@libpf.com>  Tue, 22 Sep 2020 17:44:26 +0200
+
 doxygen (1.8.20-1-c1) unstable; urgency=medium
 
   * Bump llvm version to 10.
@@ -31,12 +56,6 @@ doxygen (1.8.19-1~exp1) experimental; urgency=medium
   * doxygen 1.8.19 release.
 
  -- Paolo Greppi <paolo.greppi@libpf.com>  Thu, 20 Aug 2020 21:49:38 +0200
-
-doxygen (1.8.18-1-c1) unstable; urgency=medium
-
-  * Bump llvm version to 10.
-
- -- ciwei100000 <ciwei100000@gmail.com>  Mon, 17 Aug 2020 23:36:38 -0700
 
 doxygen (1.8.18-1) unstable; urgency=medium
 
